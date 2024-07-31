@@ -4,9 +4,10 @@
 #####################################################
 *.sketch
 *.fig
-copy.js
-style-guide
-template
+main_copy.js
+.gitignore
+README-template.md
+style-guide.md
 # Avoid accidental XD upload if you convert the design file
 ###############################################
 ## Please do not remove line 12 - thanks! 🙂 ##
