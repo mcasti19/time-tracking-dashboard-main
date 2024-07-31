@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ### Primary */
+    --Primary-Blue: #5847eb;
+    --work: #ff8c66;
+    --play: #56c2e6;
+    --study: #ff5c7c;
+    --exercise: #4acf81;
+    --social: #7536d3;
+    --self-care: #f1c65b;
+
+    /* ### Neutral */
+    --activity-hover: #34397B;
+    --Very-dark-blue: #0f1424;
+    --Dark-blue: #1c1f4a;
+    --Desaturated-blue: #6f76c8;
+    --Pale-Blue: #bdc1ff;
+}
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    color: var(--Pale-Blue);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main.container {
+    width: 90%;
+    max-width: 450px;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main,
+.header,
+.activity,
+.activity_info {
+    border-radius: 15px;
+}
+
+.main {
+    background-color: var(--Dark-blue);
+}
+
+.header {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "avatar header_name"
+        "avatar header_name";
+    padding: 30px 10px;
+    background-color: var(--Primary-Blue);
+}
+
+.header_avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: 2px solid white;
+    grid-area: avatar;
+    margin: auto;
+}
+
+.header_avatar img {
+    width: 100%;
+}
+
+.header_name {
+    margin-top: 5px;
+    display: grid;
+    gap: 3px;
+}
+
+.header_name div:first-child {
+    font-size: 12px;
+}
+
+.header_name .name {
+    font-size: 18px;
+    color: white;
+}
+
+.timeframes {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+}
+
+.timeframes label {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.timeframes input[type="radio"] {
+    display: none;
+}
+
+.timeframes input[type="radio"]:checked+label {
+    color: #fff;
+}
+
+/* ACTIVITIES*/
+
+.activities {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+    font-size: 18px;
+}
+
+.activity {
+    height: 100%;
+    min-height: 145px;
+
+    display: grid;
+    position: relative;
+    overflow: hidden;
+   /*IT IS USED SO THAT THE EXTRACT OF YOUR CHILDREN IS NOT SEEN WHEN OVER THE EDGE*/
+}
+
+.activity_icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    top: -5px;
+}
+
+.activity_info {
+    display: flex;
+    width: 100%;
+    padding: 20px 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--Dark-blue);
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.fa-ellipsis:hover {
+    cursor: pointer;
+}
+
+.activity_top,
+.activity_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title,
+.current,
+.activity_more {
+    color: white;
+}
+
+.current,
+.header_name {
+    font-weight: lighter;
+}
+
+.previous {
+    font-size: 13px;
+}
+
+
+/*MEDIA QUERIES*/
+@media (width > 768px) {
+
+    main.container {
+        max-width: 1000px;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto;
+    }
+
+    .main {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .timeframes {
+        display: grid;
+        justify-content: start;
+        padding: 20px 25px;
+        gap: 25px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 25px;
+    }
+
+    .header_avatar {
+        margin: initial;
+    }
+
+    .header_name {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header_name .name {
+        font-size: 2rem;
+
+    }
+
+    .activities {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .activity_info {
+        padding: 30px 20px;
+    }
+
+    .activity_bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        gap: 10px;
+    }
+
+    .activity_bottom .current {
+        font-size: 45px;
+    }
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

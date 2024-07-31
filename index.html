@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6c9521704b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+
+<body class="rubik">
+  <main id="main" class="container">
+
+    <!-- Avatar Section -->
+    <div class="main">
+      <div class="header">
+        <div class="header_avatar">
+          <img src="./images/image-jeremy.png" alt="avatar Jeremy" srcset="">
+        </div>
+        <div class="header_name">
+          <p class="reporTo">Report for</p>
+          <p class="name">Jeremy Robson</p>
+        </div>
+      </div>
+
+      <!-- TimeFrames Section -->
+      <div class="timeframes">
+        <input class="frames" type="radio" id="daily" name="frame" value="daily" checked>
+        <label for="daily">Daily</label>
+        <input class="frames" type="radio" id="weekly" name="frame" value="weekly">
+        <label for="weekly">Weekly</label>
+        <input class="frames" type="radio" id="monthly" name="frame" value="monthly">
+        <label for="monthly">Monthly</label>
+      </div>
+    </div>
+
+    <!-- Activities Section -->
+    <div id="activities" class="activities">
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Moises</a>.
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
